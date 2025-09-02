@@ -24,7 +24,7 @@ def get_version() -> str:
     str
         The version string.
     """
-    return version("vame-py")
+    return "0.11.0"#version("vame-py")
 
 
 def check_torch_device() -> bool:
