@@ -369,7 +369,7 @@ def train(
 
     # be sure scheduler is called before optimizer in >1.1 pytorch
     if isinstance(scheduler, ReduceLROnPlateau):
-        scheduler.step(loss)
+        scheduler.step(loss.detach())
     else:
         scheduler.step()
 
